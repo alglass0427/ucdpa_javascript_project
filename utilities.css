@@ -1,0 +1,103 @@
+/* --------------UTILITIES--------------- */
+  
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --primarycolor: #fff1ff;
+    --secondarycolor: grey;
+    --margin10-sides:10px;
+    --html-width: 1200px;
+}
+
+html{
+    margin: auto;
+    max-width: 1200px;
+    /* background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(8,14,11,0.896796218487395) 2%, rgba(121,86,9,0.9444152661064426) 66%, rgba(198,12,6,1) 100%);}    */
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(8,14,11,0.896796218487395) 63%, rgba(103,73,8,0.9444152661064426) 90%, rgba(134,17,13,1) 100%);
+    min-width: 300px;
+    
+}
+
+
+ul h3{
+    border-bottom: 2px solid var(--primarycolor);
+}
+
+.flex{
+    display: flex;
+    gap:10px;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    /* background-color: var(--secondarycolor); */
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: #fff1ff;
+}
+
+#food-allergens.flex{justify-content: ; gap:20px}
+
+header{font-family: "Poppins", sans-serif;}
+.header-wrapper{ max-width: var(--html-width);}
+
+
+.header-wrapper ul li {
+    list-style-type:  none;
+    cursor: pointer;
+   }
+
+
+#header-image{
+    width: 100px; height: auto;
+    border-radius: 50%;
+}
+
+/* ------------------------------------------------------------------- */
+/* MARGINS */
+/* Margin Left and Right */
+.mx-1{margin:1rem 0}   
+.mx-2{margin:1.5rem 0} 
+.mx-3{margin:2rem 0}  
+.mx-4{margin:3rem 0}  
+.mx-5{margin:4rem 0}
+
+/* Margin Top and Bottom */
+.my-1{margin:0 1rem} 
+.my-2{margin:0 1.5rem}
+.my-3{margin:0 2rem}
+.my-4{margin:0 3rem}
+.my-5{margin:0 4rem}
+
+/* Margin All around */
+.m-1{margin:1rem}
+.m-2{margin:1.5rem}
+.m-3{margin:2rem}
+.m-4{margin:3rem}
+.m-5{margin:4rem}
+
+/* ------------------------------------------------------------------- */
+/* PADDING */
+/* Padding Top and Bottom */
+.px-1{padding:1rem 0}
+.px-2{padding:1.5rem 0}
+.px-3{padding:2rem 0}
+.px-4{padding:3rem 0}
+.px-5{padding:4rem 0}
+
+/* Padding Left and Right */
+.py-1{padding:0 1rem}
+.py-2{padding:0 1.5rem}
+.py-3{padding:0 2rem}
+.py-4{padding:0 3rem}
+.py-5{padding:0 4rem}
+
+ /*Padding Class 1 All Around*/
+.p-05{padding:0.5rem}  
+.p-1{padding:1rem}  
+.p-2{padding:1.5rem}
+.p-3{padding:2rem}
+.p-4{padding:3rem}
+.p-5{padding:4rem}
+
+  
+  
+  

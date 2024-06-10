@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="utilities.css">
+    <link href="https://www.googleapis.com/webfonts/v1/webfonts?key=Poppins">
+    <style>
+       
+    </style>
+</head>
+<body>
+    
+    <header>
+        <div class="header-container flex p-1" >
+            <!-- <img 
+            aria-label="Image of Company Logo" 
+            alt="Header Image" 
+            id="header-image"
+            class="p-05"
+            src = "https://picsum.photos/536/354"
+            > -->
+            <h1>Menu</h1>
+            
+            <!-- <p draggable = "true" class="no-border header-flex">
+                This Is A Draggable Paragraph
+            </p> -->
+    
+        
+        
+            <div class="header-wrapper">
+                <ul class="flex">
+                    <li>Home</li>
+                    <li>Gallery</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+
+  <div class="site-container">
+    <div id="carousel-1" class="carousel" role="region" aria-labelledby="carousel-1-title">
+      <!-- <h2 class="carousel-title" id="carousel-1-title">
+        Menu
+      </h2>
+      <p class="carousel-description">
+        Sample from our Menu
+      </p> -->
+      <div class="slide" role="tabpanel" aria-labelledby="carousel-1-slide-1-title">
+        <div class="slide-content">
+          <div class="slide-caption" >
+            <h3 id="carousel-1-slide-1-title">Steak</h3>
+            <p>and Chips </p>
+          </div>
+  
+          <img src="https://tse2.mm.bing.net/th/id/OIP.W1KcGsYLKvFHt27mGtuMYwHaFj?rs=1&pid=ImgDetMain" alt="Image of Food" width="800" height="350" />
+        </div>
+      </div>
+  
+      <div class="slide" role="tabpanel" aria-labelledby="carousel-1-slide-2-title">
+        <div class="slide-content">
+          <div class="slide-caption">
+            <h3 id="carousel-1-slide-2-title">Manali Mountains</h3>
+            <p>Manali, Himachal Pradesh</p>
+          </div>
+          <img src="https://www.eatout.co.za/wp-content/uploads/2013/11/rhebok5-16May11-102150.jpg" alt="Fillet Steak Image" width="800" height="350" />
+        </div>
+      </div>
+  
+      <div class="slide" role="tabpanel" aria-labelledby="carousel-1-slide-3-title">
+        <div class="slide-content">
+          <div class="slide-caption">
+            <h3 id="carousel-1-slide-3-title">Fillet Steak</h3>
+            <p>New Zealand</p>
+          </div>
+  
+          <img src="https://thegreenloot.com/wp-content/uploads/2017/11/vegan-clean-eating-recipes-weight-loss-winter-dinner-12.jpg" alt="Aotearoa" width="800" height="350" />
+        </div>
+      </div>
+      <div class="slide" role="tabpanel" aria-labelledby="carousel-1-slide-4-title">
+        <div class="slide-content">
+          <div class="slide-caption">
+            <h3 id="carousel-1-slide-4-title">Richmond Park</h3>
+            <p>London, England</p>
+          </div>
+  
+          <img src="https://cdn.dummyjson.com/recipe-images/22.webp" alt="London's Richmond Park" width="800" height="350" />
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- BEGINNING OF the Menu -->
+
+    <div class="site-container">
+<!-- Change To Grid -->
+        <div id = "search-container" class = "flex fa">
+            <h2 class >Do you have any allergies?</h2>
+            <select id = "isAllergic" class = "btn">
+                <option value="" disabled selected>Please Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+        </div>
+     
+        <div class="search-container mx-1">
+        
+            <form id = "food-allergens" class="flex">
+
+            </form>
+
+
+        </div>
+
+        <div id = "menu-container" class="flex">
+
+        </div>
+
+      </div>
+
+    <script src="mealsJSON.js"></script>
+    <script src="ingredients.js"> </script>
+    <!-- <script src="getRecipies.js"></script> -->
+    <script src="carousel_script.js"> </script>
+    <script src="menus.js"> </script>
+
+</body>
+</html>
