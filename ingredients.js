@@ -154,13 +154,8 @@ function getIndgredients (ingList) {
 let allergenContainer  = document.getElementById("food-allergens");
 let searchContainer  = document.getElementById("search-container");
 
-function addAllergens (allergies) {
-    
-    //Itterate through list of incredients  
-    //some Test data
- 
-    // createMenuCards(testarr)
 
+function addSearchButton(){
     try {
         let searchButton = document.getElementById("searchButton")
         // nonExistentFunction();
@@ -183,6 +178,41 @@ function addAllergens (allergies) {
         // Expected output: ReferenceError: serachButton is not defined
         // (Note: the exact output may be browser-dependent)
       }
+}
+
+
+function addAllergens (allergies) {
+    
+    //Itterate through list of incredients  
+    //some Test data
+ 
+    // createMenuCards(testarr)
+
+    // try {
+    //     let searchButton = document.getElementById("searchButton")
+    //     // nonExistentFunction();
+    //     if (searchContainer.contains(searchButton)){
+    //         console.log("Search Exists");
+    //         }
+    //     else {let search = document.createElement("button");
+    //         search.textContent = "Search";
+    //         search.id = "searchButton"
+    //         search.type = "search";
+    //         search.value = "Search";
+    //         search.classList.add("fa", "fa-search");
+    //         search.id = "searchButton"
+    //         // search.classList.add("fa-search") //font awesome css 
+    //         searchContainer.appendChild(search)
+           
+    //     }
+    //   } catch (error) {
+    //     console.error(error);
+    //     // Expected output: ReferenceError: serachButton is not defined
+    //     // (Note: the exact output may be browser-dependent)
+    //   }
+
+    addSearchButton()
+
 
         for(i = 0; i < allergies.length ; i++ ){       
             //ID the Parent Element
@@ -284,6 +314,7 @@ isAllergic.addEventListener("change", () => {
         console.log("This person is allergic")
         addAllergens(singleAllergens)
     } else if (isAllergic.value === "No") {
+        addSearchButton()
         removeAllChildren(frm)
         console.log("NO Allergies")
 }}
