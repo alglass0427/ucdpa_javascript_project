@@ -156,6 +156,7 @@ let searchContainer  = document.getElementById("search-container");
 
 
 function addSearchButton(){
+    
     try {
         let searchButton = document.getElementById("searchButton")
         // nonExistentFunction();
@@ -164,7 +165,7 @@ function addSearchButton(){
             }
         else {let search = document.createElement("button");
             search.textContent = "Search";
-            search.id = "searchButton"
+            search.id = "searchButton";
             search.type = "search";
             search.value = "Search";
             search.classList.add("fa", "fa-search");
@@ -179,6 +180,31 @@ function addSearchButton(){
         // (Note: the exact output may be browser-dependent)
       }
 }
+
+
+function getSearchResults(){
+    document.getElementById("searchButton").addEventListener("click",function (evt) {
+    
+        let allergenListSelected = gatherAllergens()
+        console.log(allergenListSelected)
+        let test1 = getRecipeNotContainingAllergens(
+            mealList.recipes,allergenListSelected,containsPartialWord
+        )
+        console.log(test1)
+        
+        // num = getRandomNumber(test1.length)
+        // console.log(test1[num])
+        // console.log(test1)
+    
+        // let testarr = []
+        // testarr.push(test1[num])
+        // testarr.push(test1[num + 6])
+    
+         createMenuCards(test1)
+    })
+
+}
+
 
 
 function addAllergens (allergies) {
@@ -234,27 +260,27 @@ function addAllergens (allergies) {
 
         }
         
-        
-document.getElementById("searchButton").addEventListener("click",function (evt) {
+    getSearchResults()
+// document.getElementById("searchButton").addEventListener("click",function (evt) {
     
-    let allergenListSelected = gatherAllergens()
-    console.log(allergenListSelected)
-    let test1 = getRecipeNotContainingAllergens(
-        mealList.recipes,allergenListSelected,containsPartialWord
-    )
-    console.log(test1)
+//     let allergenListSelected = gatherAllergens()
+//     console.log(allergenListSelected)
+//     let test1 = getRecipeNotContainingAllergens(
+//         mealList.recipes,allergenListSelected,containsPartialWord
+//     )
+//     console.log(test1)
     
-    // num = getRandomNumber(test1.length)
-    // console.log(test1[num])
-    // console.log(test1)
+//     // num = getRandomNumber(test1.length)
+//     // console.log(test1[num])
+//     // console.log(test1)
 
-    // let testarr = []
-    // testarr.push(test1[num])
-    // testarr.push(test1[num + 6])
+//     // let testarr = []
+//     // testarr.push(test1[num])
+//     // testarr.push(test1[num + 6])
 
-     createMenuCards(test1)
-}
-)  
+//      createMenuCards(test1)
+// }
+// )  
 
     }
 
@@ -315,6 +341,7 @@ isAllergic.addEventListener("change", () => {
         addAllergens(singleAllergens)
     } else if (isAllergic.value === "No") {
         addSearchButton()
+        getSearchResults()
         removeAllChildren(frm)
         console.log("NO Allergies")
 }}
