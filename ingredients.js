@@ -71,13 +71,13 @@ function arrangeMeals(menu) {
         };   
     
     
-    let meals = arrangeMeals(mealList.recipes)
-    console.log(`Meal Types`)
-    console.log(cleanArray(meals[1]))
-    console.log(`Mains`)
-    console.log(meals[0])
-    console.log(`Desserts`)
-    console.log(meals[2])
+    // let meals = arrangeMeals(mealList.recipes)
+    // console.log(`Meal Types`)
+    // console.log(cleanArray(meals[1]))
+    // console.log(`Mains`)
+    // console.log(meals[0])
+    // console.log(`Desserts`)
+    // console.log(meals[2])
     
     // console.log(desserts)
     // recursiveRemoveDup(meals)
@@ -183,25 +183,28 @@ function addSearchButton(){
 
 
 function getSearchResults(){
-    document.getElementById("searchButton").addEventListener("click",function (evt) {
+    document.getElementById("searchButton").addEventListener("click",
+    function (evt) {
     
-        let allergenListSelected = gatherAllergens()
-        console.log(allergenListSelected)
-        let test1 = getRecipeNotContainingAllergens(
-            mealList.recipes,allergenListSelected,containsPartialWord
-        )
-        console.log(test1)
+    //     let allergenListSelected = gatherAllergens()
+    //     console.log(allergenListSelected)
+    //     let test1 = getRecipeNotContainingAllergens(
+    //         mealList.recipes,allergenListSelected,containsPartialWord
+    //     )
+    //     console.log(test1)
         
-        // num = getRandomNumber(test1.length)
-        // console.log(test1[num])
-        // console.log(test1)
+    //     // num = getRandomNumber(test1.length)
+    //     // console.log(test1[num])
+    //     // console.log(test1)
     
-        // let testarr = []
-        // testarr.push(test1[num])
-        // testarr.push(test1[num + 6])
+    //     // let testarr = []
+    //     // testarr.push(test1[num])
+    //     // testarr.push(test1[num + 6])
     
-         createMenuCards(test1)
-    })
+    //      createMenuCards(test1)
+    // }
+    getAllTheData()}
+    )
 
 }
 
@@ -421,36 +424,36 @@ function containsPartialWord(arr, partialWord) {
     );
 }
 
+///REMOVED To add to  API Call
 
-
-function getRecipeNotContainingAllergens (arr,arrAllerens,callBackFunction) {
-    let finalMeals = []
-    for (let i = 0; i < arr.length; i++) {
-        //loop through allergens
+// function getRecipeNotContainingAllergens (arr,arrAllerens,callBackFunction) {
+//     let finalMeals = []
+//     for (let i = 0; i < arr.length; i++) {
+//         //loop through allergens
         
-        count = 0
-        //Map the ingredients list to Upper Case as tmp
-        console.log(arr[i].name)
-        tmp = arr[i].ingredients.map(function(x){return x.toUpperCase()})
-        // console.log(tmp)
-        for (let j = 0; j < arrAllerens.length; j++) {
-            // console.log(arrAllerens[j])
-            // console.log(arr[i].ingredients)
-            console.log(`${arrAllerens[j]} : ${callBackFunction(tmp,arrAllerens[j].toUpperCase())}`)
-            // result is boolean of contains Partial words
-            if (callBackFunction(tmp,arrAllerens[j].toUpperCase())){
-                // count The allergens
-                count ++
+//         count = 0
+//         //Map the ingredients list to Upper Case as tmp
+//         console.log(arr[i].name)
+//         tmp = arr[i].ingredients.map(function(x){return x.toUpperCase()})
+//         // console.log(tmp)
+//         for (let j = 0; j < arrAllerens.length; j++) {
+//             // console.log(arrAllerens[j])
+//             // console.log(arr[i].ingredients)
+//             console.log(`${arrAllerens[j]} : ${callBackFunction(tmp,arrAllerens[j].toUpperCase())}`)
+//             // result is boolean of contains Partial words
+//             if (callBackFunction(tmp,arrAllerens[j].toUpperCase())){
+//                 // count The allergens
+//                 count ++
                 
-            }
+//             }
 
-        }
-        //if result remails 
-    if(count === 0){finalMeals.push(arr[i])}
-    }
-return finalMeals
+//         }
+//         //if result remails 
+//     if(count === 0){finalMeals.push(arr[i])}
+//     }
+// return finalMeals
 
-}
+// }
 
 function getRandomNumber (number) {
     let randomNumber = Math.floor(Math.random()*number)
@@ -466,7 +469,7 @@ function getRandomNumber (number) {
 
 
 ///Check if array, if object the add the opject to an Array
-
+//adds dynamic cards to site  -  removes existing if present with removeAllChildren
 function createMenuCards(arrChoice) {
     let cont = document.getElementById("menu-container")
     removeAllChildren(cont)
